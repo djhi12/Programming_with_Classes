@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 class Program
 {
+    static void MyMethod(){
+        Console.Write("Jampong");
+    }
     static void Main(string[] args)
     {
 
@@ -91,42 +94,42 @@ class Program
         // }
 
 
-        // C# Prep 4 - Lists
-        Console.Write($"\n\nEnter a list of numbers, type 0 when finished.\n");
-        List<int> numbers = new List<int>();
-        int enterNumber = -1;
+        // // C# Prep 4 - Lists
+        // Console.Write($"\n\nEnter a list of numbers, type 0 when finished.\n");
+        // List<int> numbers = new List<int>();
+        // int enterNumber = -1;
         
 
-        while (true) {
+        // while (true) {
 
-            Console.Write($"Enter a number: ");
-            string enterNum = Console.ReadLine();
-            enterNumber = int.Parse(enterNum);
-            numbers.Add(enterNumber);
-            numbers.Sort();
+        //     Console.Write($"Enter a number: ");
+        //     string enterNum = Console.ReadLine();
+        //     enterNumber = int.Parse(enterNum);
+        //     numbers.Add(enterNumber);
+        //     numbers.Sort();
 
-            if (enterNumber == 0) {
-                int sum = numbers.AsQueryable().Sum(); // Sum
-                double average = Queryable.Average(numbers.AsQueryable()); // average
-                int larg_num = numbers.Max(); // largest
-                long smallNum = numbers.AsQueryable().Min();
+        //     if (enterNumber == 0) {
+        //         int sum = numbers.AsQueryable().Sum(); // Sum
+        //         double average = Queryable.Average(numbers.AsQueryable()); // average
+        //         int larg_num = numbers.Max(); // largest
+        //         long smallNum = numbers.AsQueryable().Min();
 
-                Console.Write($"\nThe sum is: {sum}\n");
-                Console.Write($"The average is: {Math.Round(average, 3)}\n");
-                Console.Write($"The largest number is: {larg_num}\n");
-                // Console.Write($"The smallest number is: {smallNum}\n");
-                // Console.WriteLine($"The sorted list is: {string.Join(" ", numbers)}\n\n");
-                Console.WriteLine($"The sorted list is: ");
-                for(int i = 0; i < numbers.Count; i++){
-                    Console.WriteLine(numbers[i]);
-                }
-                break;
+        //         Console.Write($"\nThe sum is: {sum}\n");
+        //         Console.Write($"The average is: {Math.Round(average, 3)}\n");
+        //         Console.Write($"The largest number is: {larg_num}\n");
+        //         // Console.Write($"The smallest number is: {smallNum}\n");
+        //         // Console.WriteLine($"The sorted list is: {string.Join(" ", numbers)}\n\n");
+        //         Console.WriteLine($"The sorted list is: ");
+        //         for(int i = 0; i < numbers.Count; i++){
+        //             Console.WriteLine(numbers[i]);
+        //         }
+        //         break;
 
-            }   
+        //     }   
             
-        }
+        // }
 
-
+        // MyMethod();
         
 
 
