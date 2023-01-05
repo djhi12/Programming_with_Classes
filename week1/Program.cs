@@ -62,9 +62,11 @@ class Program
 
 
         // // C# Prep 3 - Loops
-        // Console.Write($"\n\nWhat is the magic number? ");
-        // string magicNumber = Console.ReadLine();
-        // int magicNum = int.Parse(magicNumber);
+        // Random randomGenerator = new Random();
+        // int number = randomGenerator.Next(1, 101);
+        // // Console.Write($"\n\nWhat is the magic number? ");
+        // // string magicNumber = Console.ReadLine();
+        // // int magicNum = int.Parse(magicNumber);
 
         // while (true) {
             
@@ -73,15 +75,15 @@ class Program
         //     string guess = Console.ReadLine();
         //     int guessNum = int.Parse(guess);
 
-        //     if(magicNum > guessNum) {
+        //     if(number > guessNum) {
         //         Console.Write($"Higher\n");
         //     }
 
-        //     else if (magicNum < guessNum) {
+        //     else if (number < guessNum) {
         //         Console.Write($"Lower\n");
         //     }
 
-        //     else if (magicNum == guessNum) {
+        //     else if (number == guessNum) {
         //         Console.Write($"You guessed it!\n");
         //         break;
         //     }
@@ -93,6 +95,7 @@ class Program
         Console.Write($"\n\nEnter a list of numbers, type 0 when finished.\n");
         List<int> numbers = new List<int>();
         int enterNumber = -1;
+        
 
         while (true) {
 
@@ -100,20 +103,31 @@ class Program
             string enterNum = Console.ReadLine();
             enterNumber = int.Parse(enterNum);
             numbers.Add(enterNumber);
+            numbers.Sort();
 
             if (enterNumber == 0) {
                 int sum = numbers.AsQueryable().Sum(); // Sum
-                double average = Queryable.Average(numbers.AsQueryable());
-                int larg_num = numbers.Max();
+                double average = Queryable.Average(numbers.AsQueryable()); // average
+                int larg_num = numbers.Max(); // largest
+                long smallNum = numbers.AsQueryable().Min();
 
                 Console.Write($"\nThe sum is: {sum}\n");
-                Console.Write($"The average is: {average}\n");
-                Console.Write($"The largest number is: {larg_num}\n\n");
+                Console.Write($"The average is: {Math.Round(average, 3)}\n");
+                Console.Write($"The largest number is: {larg_num}\n");
+                // Console.Write($"The smallest number is: {smallNum}\n");
+                // Console.WriteLine($"The sorted list is: {string.Join(" ", numbers)}\n\n");
+                Console.WriteLine($"The sorted list is: ");
+                for(int i = 0; i < numbers.Count; i++){
+                    Console.WriteLine(numbers[i]);
+                }
                 break;
 
             }   
             
         }
+
+
+        
 
 
 
