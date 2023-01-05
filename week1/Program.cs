@@ -102,10 +102,13 @@ class Program
             numbers.Add(enterNumber);
 
             if (enterNumber == 0) {
-                int sum = numbers.AsQueryable().Sum();
+                int sum = numbers.AsQueryable().Sum(); // Sum
+                double average = Queryable.Average(numbers.AsQueryable());
+                int larg_num = numbers.Max();
+
                 Console.Write($"\nThe sum is: {sum}\n");
-                Console.Write($"The average is: \n");
-                Console.Write($"The largest number is: \n\n");
+                Console.Write($"The average is: {average}\n");
+                Console.Write($"The largest number is: {larg_num}\n\n");
                 break;
 
             }   
