@@ -5,7 +5,22 @@ using System.Collections.Generic;
 class Program
 {
     static void MyMethod(){
-        Console.Write("Jampong");
+        Console.Write($"Welcome to the Program!\n");
+
+        Console.Write($"Please enter your name: ");
+        string userName = Console.ReadLine();
+
+        Console.Write($"Please enter your favorite number: ");
+        string favoriteNum = Console.ReadLine();
+        int favNum = int.Parse(favoriteNum);
+
+
+
+        Console.Write($"{userName}, the square of your number is");
+
+
+
+
     }
     static void Main(string[] args)
     {
@@ -129,7 +144,7 @@ class Program
             
         // }
 
-        // MyMethod();
+        MyMethod();
         
 
 
