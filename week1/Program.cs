@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 class Program
 {
+    // C# Prep 5 - Functions
     static void MyMethod(){
         Console.Write($"Welcome to the Program!\n");
 
@@ -145,6 +146,7 @@ class Program
             
         }
 
+        // C# Prep 5 - Functions
         MyMethod();
         
 
