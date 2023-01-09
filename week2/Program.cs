@@ -1,32 +1,29 @@
 ﻿using System;
 
-// A code template for the category of things known as Person. The
-// responsibility of a Person is to hold and display personal information.
-public class Person
+public class Job
 {
-    // The C# convention is to start member variables with an underscore _
-    public string _givenName = "";
-    public string _familyName = "";
+    public string _name = "Allison Rose";
+    public string _job1 = "Software Engineer (Microsoft)";
+    public int _startYear1 = 2019;
+    public int _endYear1 = 2022;
 
-    // A special method, called a constructor that is invoked using the  
-    // new keyword followed by the class name and parentheses.
-    public Person()
+    public string _job2 = "Manager (Apple)";
+    public int _startYear2 = 2022;
+    public int _endYear2 = 2023;
+
+
+
+    public Job()
     {
     }
 
     // A method that displays the person's full name as used in eastern 
     // countries or <family name, given name>.
-    public void ShowEasternName()
+    public void ShowResume()
     {
-        Console.WriteLine($"{_familyName}, {_givenName}");
+        Console.WriteLine($"\nName: {_name}\nJobs:\n{_job1} {_startYear1}-{_endYear1}\n{_job2} {_startYear2}-{_endYear2}\n");
     }
 
-    // A method that displays the person's full name as used in western 
-    // countries or <given name family name>.
-    public void ShowWesternName()
-    {
-        Console.WriteLine($"{_givenName} {_familyName}");
-    }
 }
 
 
@@ -39,23 +36,9 @@ class Program
     {
 
         // Console.Write("Hello world!");
-        Person person = new Person();
-        person._givenName = "Joseph";
-        person._familyName = "Smith";
-        person.ShowWesternName();
-        person.ShowEasternName();
+        Job resume = new Job();
 
-        // Emma Smith
-        Person person2 = new Person();
-        person2._familyName = "Smith";
-        person2._givenName = "Emma";
-        person2.ShowWesternName();
-        person2.ShowEasternName();
+        resume.ShowResume();
 
     }
 }
-
-
-
-
-
