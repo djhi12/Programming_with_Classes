@@ -1,9 +1,18 @@
 using System;
 
-public class prompt {
-    public string _promptQuestions;
 
-    public void promptDisplay() {
-        Console.Write($"_promptQuestions");
+    public class Question
+    {
+        public string _question;
+
+        
+        public Question()
+        {
+        }
+
+        
+        public void Display(){
+            Console.Write($"{_question}");
+        }
+       
     }
-}
