@@ -1,39 +1,52 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 class Program
 {
+
     static void Main(string[] args)
     {
-         while (true)
+        while (true)
         {
 
             Console.Write("Please select one of the following choices:\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\nWhat would you like to do? ");
 
             int choices = int.Parse(Console.ReadLine());
+            string filePath = "prompts.csv";
 
             if (choices == 1)
             {
-                string filename = "listQuestions.txt";
-                string[] lines = System.IO.File.ReadAllLines(filename);
 
-                foreach (string line in lines)
+                Program program = new Program();
+
+                program.writeToCSV();
+                program.readFromCSV();
+
+                public void writeToCSV()
                 {
-                    string[] parts = line.Split(",");
+                    StringBuilder builder = new StringBuilder();
 
-                    string firstName = parts[0];
-                    string lastName = parts[1];
+                    string text1 = "Text1";
+                    string text2 = "Text2";
+
+                    builder.AppendLine(string.Format("{0}|{1}", text1, text2));
+
+                    File.WriteAllText(filePath, builder.ToString());
                 }
 
-                using (StreamWriter outputFile = new StreamWriter(filename))
+                public void readFromCSV()
                 {
-                    // You can add text to the file with the WriteLine method
-                    outputFile.WriteLine("This will be the first line in the file.");
+                    StreamReader streamReader = new StreamReader(filePath);
 
-                    // You can use the $ and include variables just like with Console.WriteLine
-                    string color = "Blue";
-                    outputFile.WriteLine($"My favorite color is {color}");
+                    while (!streamReader.EndOfStream)
+                    {
+                        var line = streamReader.ReadLine();
+                        var values = line.Split();
+
+                        Console.WriteLine("{0}", values[0]);
+                    }
                 }
 
             }
@@ -59,4 +72,4 @@ class Program
             }
         }
     }
-    }
+}
