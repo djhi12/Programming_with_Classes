@@ -21,6 +21,7 @@ class Program
             if (choices == 1) {
 
                 promptGen.readFile();
+                promptGen.writeFile();
             }
             
             else if (choices == 2)
