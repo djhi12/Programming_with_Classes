@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+// using System.String;
 
 class Program
 {
@@ -9,7 +10,7 @@ class Program
     static void Main(string[] args)
     {
         while (true)
-        {
+        {   
 
             Console.Write("Please select one of the following choices:\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\nWhat would you like to do? ");
 
@@ -19,7 +20,7 @@ class Program
             if (choices == 1)
             {
 
-                Program program = new Program();
+                PromptGenerator program = new PromptGenerator();
 
                 program.writeToCSV();
                 program.readFromCSV();
