@@ -4,34 +4,43 @@ using System.Text;
 
 public class PromptGenerator
 {
-    string _filePath = "C:\\Programming_with_Classes\\prove\\Develop02";
+    public string _promptQuestions;
     
-    PromptGenerator()
-    {
-    }
+    // public void writeFile(){
+    //     StringBuilder builder = new StringBuilder();
 
+    //     string text1 = "Text1";
+    //     string text2 = "Text2";
 
-    public void writeFile(){
-        StringBuilder builder = new StringBuilder();
+    //     builder.AppendLine(string.Format("{0} | {1}", text1, text2));
 
-        string text1 = "Text1";
-        string text2 = "Text2";
+    //     File.WriteAllText(_filePath, builder.ToString());
 
-        builder.AppendLine(string.Format("{0} | {1}", text1, text2));
+    // }
 
-        File.WriteAllText(_filePath, builder.ToString());
+    // public void readFile(){
+    //     StreamReader streamReader = new StreamReader(_filePath);
 
-    }
+    //     while (!streamReader.EndOfStream) {
+    //         var line = streamReader.ReadLine();
+    //         var values = line.Split();
 
-    public void readFile(){
-        StreamReader streamReader = new StreamReader(_filePath);
+    //         Console.WriteLine("{0}", values[0]);
+    //     }
+    // }
 
-        while (!streamReader.EndOfStream) {
-            var line = streamReader.ReadLine();
-            var values = line.Split();
+    public void displayPrompt(){
+        var _promptQuestions = new List<string>() {
+            "Who was the most interesting person I interacted with today?",
+            "What was the best part of my day?",
+            "How did I see the hand of the Lord in my life today?",
+            "What was the strongest emotion I felt today?",
+            "If I had one thing I could do over today, what would it be?"
+        };
 
-            Console.WriteLine("{0}", values[0]);
-        }
+        Random randQuestion = new Random();
+        int indexQuestion = randQuestion.Next(0, _promptQuestions.Count());
+        Console.Write($"{_promptQuestions[indexQuestion]}\n");
     }
   
 

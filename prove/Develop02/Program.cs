@@ -20,8 +20,9 @@ class Program
 
             if (choices == 1) {
 
-                promptGen.readFile();
-                promptGen.writeFile();
+                // promptGen.readFile();
+                // promptGen.writeFile();
+                promptGen.displayPrompt();
             }
             
             else if (choices == 2)
