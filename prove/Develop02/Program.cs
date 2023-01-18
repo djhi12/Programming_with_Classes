@@ -17,14 +17,10 @@ class Program
 
             int choices = int.Parse(Console.ReadLine());
             PromptGenerator promptGen = new PromptGenerator();
-            AnswerInput answerInput = new AnswerInput();
+            // AnswerInput answerInput = new AnswerInput();
 
             if (choices == 1) {
-
-                // promptGen.readFile();
-                // promptGen.writeFile();
                 promptGen.displayPrompt();
-                answerInput.AnswerDisplay();
             }
             
             else if (choices == 2)
