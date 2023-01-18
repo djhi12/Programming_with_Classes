@@ -5,14 +5,14 @@ using System.Text;
 public class AnswerInput
 {
     PromptGenerator promptGen = new PromptGenerator();
-
-    public string _promptQuestions;
+    DateTime _date = DateTime.Now;
+    public string _promptAnswer;
     
    
 
-    public void AnswerDisplay(){
-        // var _promptQuestions = new 
-
+    public string AnswerDisplay(){
+        _promptAnswer = (string.Format("{0} Prompt: {1}", _date, promptGen.displayPrompt()));
+        return _promptAnswer;
     }
 
 }

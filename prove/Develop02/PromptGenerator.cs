@@ -8,7 +8,7 @@ public class PromptGenerator
 
    
 
-    public void displayPrompt(){
+    public string displayPrompt(){
         var _promptQuestions = new List<string>() {
             "Who was the most interesting person I interacted with today?",
             "What was the best part of my day?",
@@ -19,7 +19,8 @@ public class PromptGenerator
 
         Random randQuestion = new Random();
         int indexQuestion = randQuestion.Next(0, _promptQuestions.Count());
-        Console.Write($"{_promptQuestions[indexQuestion]}\n");
+        // Console.Write($"{_promptQuestions[indexQuestion]}\n");
+        return _promptQuestions[indexQuestion];
     }
   
 
