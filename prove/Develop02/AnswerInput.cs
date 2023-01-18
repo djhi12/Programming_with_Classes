@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-public class inputAnswer
+public class AnswerInput
 {
     PromptGenerator promptGen = new PromptGenerator();
 
@@ -10,7 +10,7 @@ public class inputAnswer
     
    
 
-    public void inputAns(){
+    public void AnswerDisplay(){
         // var _promptQuestions = new 
 
     }
