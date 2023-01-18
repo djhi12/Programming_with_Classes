@@ -17,7 +17,6 @@ class Program
 
             int choices = int.Parse(Console.ReadLine());
             PromptGenerator promptGen = new PromptGenerator();
-            // inputAnswer inputAnsr = new inputAnswer();
 
             if (choices == 1) {
 
