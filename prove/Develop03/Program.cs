@@ -10,6 +10,6 @@ class Program
 
         Scripture scripture = new Scripture();
 
-        scripture.scriptureDisplay();
+        Console.Write($"{scripture.scriptureDisplay()}");
     }
 }
