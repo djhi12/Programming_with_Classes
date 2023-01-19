@@ -4,8 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        while(true) {
+        // while(true) {
             
-        }
+        // }
+
+        Scripture scripture = new Scripture();
+
+        scripture.scriptureDisplay();
     }
 }
