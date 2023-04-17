@@ -1,0 +1,11 @@
+To install .NET in Visual Studio Code, you can follow these steps:
+
+Install Visual Studio Code: If you haven't already installed Visual Studio Code, you can download it from the official website: https://code.visualstudio.com/.
+
+Install the C# extension: Open Visual Studio Code and click on the Extensions icon on the left-hand side of the window. Search for "C#" in the search bar and install the official C# extension from Microsoft.
+
+Install .NET: To install .NET, you will need to go to the .NET website and download the appropriate version for your operating system: https://dotnet.microsoft.com/download/dotnet.
+
+Verify your installation: After installing .NET, you can verify that it was installed correctly by opening a terminal window and typing dotnet --version. If the installation was successful, you should see the version number of .NET that you installed.
+
+Once you have completed these steps, you should be able to create and run C# projects in Visual Studio Code.
