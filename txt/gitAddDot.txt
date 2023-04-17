@@ -1,0 +1,31 @@
+"git add ." is a command in Git that adds all the changes made to tracked files in the current directory to the staging area, which prepares them to be committed.
+
+The dot (".") after the "add" command specifies that all changes made to any tracked files in the current directory should be added to the staging area.
+
+This command is commonly used when multiple files have been modified or new files have been added, and you want to include all the changes in the next commit.
+
+It's important to note that "git add ." only adds changes made to tracked files. If you have created new files that are not yet being tracked, you will need to use the "git add <filename>" command to add them to the staging area.
+
+
+How to use it?
+To use the "git add ." command, follow these steps:
+
+Open your terminal or command prompt.
+
+Navigate to the directory that contains the Git repository you want to work with.
+
+Run the command "git add ." to add all the changes made to tracked files in the current directory to the staging area.
+
+You can now review the changes using the "git status" command to ensure that all the changes you want to commit are included in the staging area.
+
+Once you are satisfied with the changes, use the "git commit" command to commit the changes to the repository.
+
+Here's an example of how to use "git add ." command:
+
+$ cd /path/to/your/repo
+$ git add .
+$ git status
+$ git commit -m "Added new feature"
+
+In the example above, we first navigate to the directory that contains our Git repository. Then, we run the "git add ." command to add all the changes made to tracked files in the current directory to the staging area. We then use the "git status" command to review the changes and ensure that everything is included as expected. Finally, we commit the changes with the message "Added new feature" using the "git commit" command.
+
