@@ -4,7 +4,7 @@
     To declare a variable, you need to specify the variable's name and its data type, like this:
 */
 
-int age; // declares an integer variable named "age"
+// int age; // declares an integer variable named "age"
 
 
 // You can also initialize the variable when you declare it, like this:
