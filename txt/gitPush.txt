@@ -1,0 +1,11 @@
+"git push" is a command in Git, a version control system used for software development, that is used to upload local repository content to a remote repository.
+
+When you make changes to your local repository, you can use "git push" to update the changes to a remote repository, such as a repository hosted on GitHub, GitLab, or Bitbucket. This allows you to share your code with others or keep a backup copy of your code.
+
+To use "git push", you need to have already set up a remote repository and linked it to your local repository using the command "git remote add". Once you have made changes to your local repository, you can use the command "git push" followed by the name of the remote repository and the branch you want to push to.
+
+For example, if you want to push changes to the master branch of a remote repository called "origin", you would use the following command:
+
+git push origin master
+
+This would upload your changes to the remote repository, where others can access them.
