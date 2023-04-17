@@ -1,0 +1,7 @@
+Version control is a software tool that helps you keep track of changes made to a file or a set of files over time. It allows you to see the history of changes made to the files, and it helps you to collaborate with others on the same files without losing any work.
+
+In version control, you create a repository that contains all the files you want to track changes for. Each time you make a change to a file, you commit that change to the repository. The repository stores each commit, along with a message describing the changes made, the date and time the commit was made, and the person who made the commit.
+
+Version control also allows you to create branches, which are copies of the repository that can be worked on separately from the main repository. Branches can be used to experiment with new features or to fix bugs without affecting the main codebase. Once changes are tested and verified, they can be merged back into the main codebase.
+
+Version control is commonly used in software development, but it can also be used for other types of files, such as documentation or design files. Some popular version control systems include Git, Subversion, and Mercurial.
