@@ -1,0 +1,26 @@
+"git init" is a command in Git, which is a version control system used for tracking changes in source code and other files.
+
+The "git init" command is used to initialize a new Git repository in a directory. When you run this command, Git will create a new subdirectory called ".git" in the current directory, which is where Git will store all the information about the repository, such as the history of changes, branches, and commits.
+
+Once you have initialized a new Git repository using "git init", you can start adding files to it and tracking changes to those files using Git. You can also use other Git commands, such as "git add", "git commit", and "git push", to manage your repository and collaborate with others.
+
+
+How to use it?
+To use "git init", follow these steps:
+
+Open a terminal or command prompt in the directory where you want to create your new Git repository.
+
+Type the command "git init" and press enter. This will initialize a new Git repository in the current directory.
+
+Once you have initialized the Git repository, you can start adding files to it using the "git add" command. For example, to add a file called "index.html", you would type "git add index.html".
+
+After adding your files, use the "git commit" command to create a new commit with your changes. For example, to commit your changes with the message "Initial commit", you would type "git commit -m 'Initial commit'".
+
+You can now use other Git commands, such as "git status", "git log", and "git diff", to manage your repository and view information about your changes.
+
+It's important to note that "git init" only needs to be run once when creating a new Git repository. Once the repository is initialized, you can continue to use Git to manage your files and track changes over time.
+
+
+
+
+
