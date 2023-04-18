@@ -9,6 +9,7 @@
 
 // You can also initialize the variable when you declare it, like this:
 int age = 30; // declares and initializes the variable "age" with a value of 30
+Console.WriteLine(age);
 
 
 /*
@@ -28,13 +29,32 @@ int age = 30; // declares and initializes the variable "age" with a value of 30
 
 // Here's an example that declares and initializes variables of various types:
 bool isTrue = true;
+Console.WriteLine(isTrue);
+
 byte myByte = 255;
+Console.WriteLine(myByte);
+
 short myShort = -32768;
+Console.WriteLine(myShort);
+
 int myInt = 123456789;
+Console.WriteLine(myInt);
+
 long myLong = 123456789012345;
+Console.WriteLine(myLong);
+
 float myFloat = 3.14f;
+Console.WriteLine(myFloat);
+
 double myDouble = 3.14159265358979;
+Console.WriteLine(myDouble);
+
 decimal myDecimal = 3.1415926535897932384626433832m;
+Console.WriteLine(myDecimal);
+
 char myChar = 'A';
+Console.WriteLine(myChar);
+
 string myString = "Hello, world!";
+Console.WriteLine(myString);
 

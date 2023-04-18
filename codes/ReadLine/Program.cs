@@ -4,7 +4,7 @@
 // Here's an example of using "Console.ReadLine()" to read input from the user:
 Console.WriteLine("Please enter your name:");
 string name = Console.ReadLine();
-Console.WriteLine("Hello, " + name + "!");
+Console.WriteLine($"Hello, {name}!");
 
 /*
     In this example, the program prompts the user to enter their name using "Console.WriteLine()". The "Console.ReadLine()" method then waits for the user to enter a line of text and press Enter. The text that was entered is stored in a variable called "name".
