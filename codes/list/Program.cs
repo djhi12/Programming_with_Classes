@@ -11,15 +11,6 @@ class Program
             Lists are a commonly used data structure in C# for storing collections of items. When using lists, the "using" keyword is not typically used, as it is intended for objects that require explicit disposal, such as database connections or file streams.
         */
 
-        // Instead, when declaring a list in C#, you would typically do the following:
-        // List<string> myList = new List<string>();
-
-
-        // This creates a new instance of a list of strings named "myList". You can then add items to the list using the "Add" method, like so:
-        // myList.Add("item1");
-        // myList.Add("item2");
-
-
         // You can also access items in the list by their index, like so:
         // string secondItem = myList[1];
 
@@ -28,9 +19,11 @@ class Program
 
         // Example Program
         // Declare a new list of strings
+        // Instead, when declaring a list in C#, you would typically do the following:
         List<string> myList = new List<string>();
 
         // Add some items to the list
+        // This creates a new instance of a list of strings named "myList". You can then add items to the list using the "Add" method, like so:
         myList.Add("apple");
         myList.Add("banana");
         myList.Add("orange");

@@ -21,5 +21,6 @@ class Program
         int sum = x + y;
         return sum;
     }
+    
     // In this program, we define a function called AddNumbers that takes two integers as input and returns their sum. We then call this function from the Main method and pass in the values of a and b as arguments. The result of the function call is stored in a variable called result, which is then printed to the console using Console.WriteLine.
 }
