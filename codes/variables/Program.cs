@@ -31,9 +31,11 @@ Console.WriteLine(age);
 bool isTrue = true;
 Console.WriteLine(isTrue);
 
+// In C#, "byte" is a built-in value type that represents an unsigned 8-bit integer. It has a range of 0 to 255 and uses 1 byte of memory.
 byte myByte = 255;
 Console.WriteLine(myByte);
 
+// 
 short myShort = -32768;
 Console.WriteLine(myShort);
 
