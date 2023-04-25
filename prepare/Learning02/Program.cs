@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -9,7 +10,7 @@ class Program
         job1._jobTitle = "\nSoftware Engineer";
         job1._company = "Microsoft";
         job1._year = "2019-2022";
-        job1.Display();
+        // job1.Display();
 
 
         // Job 2
@@ -17,6 +18,12 @@ class Program
         job2._jobTitle = "Manager";
         job2._company = "Apple";
         job2._year = "2022-2023\n";
-        job2.Display();
+        // job2.Display();
+
+
+        // Resume
+        Resume resume = new Resume();
+        resume._name = "Allison Rose";
+        resume.jobDisplay();
     }
 }
