@@ -1,5 +1,10 @@
 using System;
 
+public class Job 
+{
+    _jobTitle
+}
+
 class Program
 {
     static void Main(string[] args)
