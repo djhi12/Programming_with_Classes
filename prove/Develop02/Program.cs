@@ -2,22 +2,22 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-namespace PromptJournal
-{
-    class Entry
-    {
-        public string Prompt { get; set; }
-        public string Response { get; set; }
-        public DateTime Date { get; set; }
+// namespace PromptJournal
+// {
+//     class Entry
+//     {
+//         public string Prompt { get; set; }
+//         public string Response { get; set; }
+//         public DateTime Date { get; set; }
 
-        public Entry(string prompt, string response, DateTime date)
-        {
-            Prompt = prompt;
-            Response = response;
-            Date = date;
-        }
-    }
-
+//         public Entry(string prompt, string response, DateTime date)
+//         {
+//             Prompt = prompt;
+//             Response = response;
+//             Date = date;
+//         }
+//     }
+namespace PromptJournal {
     class Program
     {
         static void Main(string[] args)
@@ -129,4 +129,5 @@ namespace PromptJournal
             }
         }
     }
+
 }
