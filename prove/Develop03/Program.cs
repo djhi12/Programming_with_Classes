@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        var scripture = new Scripture("John", 3, 16, "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
+        var scripture = new Scripture("John", 3, 16, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
 
         Console.Clear();
         Console.WriteLine(scripture.ToString());
