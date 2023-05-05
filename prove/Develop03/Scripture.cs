@@ -1,16 +1,18 @@
 class Scripture
 {
-    public Reference Reference { get; set; }
-    public string Text { get; set; }
+    public Reference Reference { get; }
+    public List<Word> Words { get; }
 
-    public Scripture(Reference reference, string text)
+    public Scripture(string book, int chapter, int verse, string text)
     {
-        Reference = reference;
-        Text = text;
+        Reference = new Reference(book, chapter, verse);
+        Words = text.Split(' ')
+                    .Select((word, index) => new Word(index, word))
+                    .ToList();
     }
 
-    public string[] GetWords()
+    public override string ToString()
     {
-        return Text.Split(' ');
+        return $"{Reference.ToString()} {string.Join(" ", Words.Select(word => word.Text))}";
     }
 }

@@ -1,86 +1,39 @@
 using System;
 using System.Linq;
-
-// class Reference
-// {
-//     public string Book { get; set; }
-//     public int Chapter { get; set; }
-//     public int StartVerse { get; set; }
-//     public int EndVerse { get; set; }
-
-//     public Reference(string book, int chapter, int startVerse, int endVerse = -1)
-//     {
-//         Book = book;
-//         Chapter = chapter;
-//         StartVerse = startVerse;
-//         EndVerse = endVerse;
-//     }
-
-//     public override string ToString()
-//     {
-//         if (EndVerse > 0)
-//         {
-//             return $"{Book} {Chapter}:{StartVerse}-{EndVerse}";
-//         }
-//         else
-//         {
-//             return $"{Book} {Chapter}:{StartVerse}";
-//         }
-//     }
-// }
-
-// class Scripture
-// {
-//     public Reference Reference { get; set; }
-//     public string Text { get; set; }
-
-//     public Scripture(Reference reference, string text)
-//     {
-//         Reference = reference;
-//         Text = text;
-//     }
-
-//     public string[] GetWords()
-//     {
-//         return Text.Split(' ');
-//     }
-// }
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Reference reference = new Reference("John", 3, 16);
-        Scripture scripture = new Scripture(reference, "For aGod so bloved the cworld, that he dgave his eonly begotten fSon, that whosoever gbelieveth in him should not perish, but have heverlasting ilife.");
-        string[] words = scripture.GetWords();
-        int[] hiddenIndices = new int[words.Length];
+        var scripture = new Scripture("John", 3, 16, "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
 
         Console.Clear();
-        Console.WriteLine(scripture.Reference);
-        Console.WriteLine(scripture.Text);
+        Console.WriteLine(scripture.ToString());
         Console.WriteLine("Press enter to hide words or type 'quit' to exit.");
         string input = Console.ReadLine();
 
         while (input.ToLower() != "quit")
         {
             // Find words to hide
-            int numWordsToHide = words.Length / 3; // Hide 1/3 of words
-            int[] wordsToHide = Enumerable.Range(0, words.Length)
-                                          .Where(i => hiddenIndices[i] == 0) // Only consider words that are not already hidden
-                                          .OrderBy(i => Guid.NewGuid()) // Randomly sort the list
-                                          .Take(numWordsToHide)
-                                          .ToArray();
+            int numWordsToHide = scripture.Words.Count / 3; // Hide 1/3 of words
+            List<int> wordsToHide = Enumerable.Range(0, scripture.Words.Count)
+                                               .Where(i => !scripture.Words[i].IsHidden)
+                                               .OrderBy(i => Guid.NewGuid())
+                                               .Take(numWordsToHide)
+                                               .ToList();
+
             // Hide words
-            for (int i = 0; i < words.Length; i++)
+            foreach (var word in scripture.Words)
             {
-                if (wordsToHide.Contains(i))
+                if (wordsToHide.Contains(word.Index))
                 {
-                    Console.Write(new string('_', words[i].Length) + " ");
-                    hiddenIndices[i] = 1;
+                    Console.Write(new string('_', word.Text.Length) + " ");
+                    word.Hide();
                 }
                 else
                 {
-                    Console.Write(words[i] + " ");
+                    Console.Write(word.Text + " ");
                 }
             }
 
@@ -90,3 +43,60 @@ class Program
         }
     }
 }
+
+// class Scripture
+// {
+//     public Reference Reference { get; }
+//     public List<Word> Words { get; }
+
+//     public Scripture(string book, int chapter, int verse, string text)
+//     {
+//         Reference = new Reference(book, chapter, verse);
+//         Words = text.Split(' ')
+//                     .Select((word, index) => new Word(index, word))
+//                     .ToList();
+//     }
+
+//     public override string ToString()
+//     {
+//         return $"{Reference.ToString()} {string.Join(" ", Words.Select(word => word.Text))}";
+//     }
+// }
+
+// class Word
+// {
+//     public int Index { get; }
+//     public string Text { get; }
+//     public bool IsHidden { get; private set; }
+
+//     public Word(int index, string text)
+//     {
+//         Index = index;
+//         Text = text;
+//         IsHidden = false;
+//     }
+
+//     public void Hide()
+//     {
+//         IsHidden = true;
+//     }
+// }
+
+// class Reference
+// {
+//     public string Book { get; }
+//     public int Chapter { get; }
+//     public int Verse { get; }
+
+//     public Reference(string book, int chapter, int verse)
+//     {
+//         Book = book;
+//         Chapter = chapter;
+//         Verse = verse;
+//     }
+
+//     public override string ToString()
+//     {
+//         return $"{Book} {Chapter}:{Verse}";
+//     }
+// }
