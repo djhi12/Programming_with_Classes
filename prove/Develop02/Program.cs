@@ -2,22 +2,27 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-// namespace PromptJournal
-// {
-//     class Entry
-//     {
-//         public string Prompt { get; set; }
-//         public string Response { get; set; }
-//         public DateTime Date { get; set; }
+namespace PromptJournal
+{
+    // class Entry
+    // {
+    //     public string EntryPrompt { get; set; }
+    //     public string Response { get; set; }
+    //     public DateTime Date { get; set; }
 
-//         public Entry(string prompt, string response, DateTime date)
-//         {
-//             Prompt = prompt;
-//             Response = response;
-//             Date = date;
-//         }
-//     }
-namespace PromptJournal {
+    //     public Entry(string prompt, string response, DateTime date)
+    //     {
+    //         EntryPrompt = prompt;
+    //         Response = response;
+    //         Date = date;
+    //     }
+    // }
+
+    // class Prompt
+    // {
+    //     public string PromptText { get; set; }
+    // }
+
     class Program
     {
         static void Main(string[] args)
@@ -62,7 +67,7 @@ namespace PromptJournal {
 
                         foreach (Entry e in entries)
                         {
-                            Console.WriteLine($"Date: {e.Date}\nPrompt: {e.Prompt}\nResponse: {e.Response}\n");
+                            Console.WriteLine($"Date: {e.Date}\nPrompt: {e.EntryPrompt}\nResponse: {e.Response}\n");
                         }
 
                         break;
@@ -77,7 +82,7 @@ namespace PromptJournal {
                         {
                             foreach (Entry e in entries)
                             {
-                                writer.WriteLine($"Prompt: {e.Prompt}");
+                                writer.WriteLine($"Prompt: {e.EntryPrompt}");
                                 writer.WriteLine($"Response: {e.Response}");
                                 writer.WriteLine($"Date: {e.Date}");
                             }
@@ -129,5 +134,4 @@ namespace PromptJournal {
             }
         }
     }
-
 }
