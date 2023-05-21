@@ -1,0 +1,2 @@
+SimpleGoal,Pray,Pray,100,False
+SimpleGoal,Read,Read,100,False
