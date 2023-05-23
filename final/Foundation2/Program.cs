@@ -44,137 +44,137 @@ class Program
     }
 }
 
-class Order
-{
-    private List<Product> products;
-    private Customer customer;
+// class Order
+// {
+//     private List<Product> products;
+//     private Customer customer;
 
-    public Order(Customer customer)
-    {
-        products = new List<Product>();
-        this.customer = customer;
-    }
+//     public Order(Customer customer)
+//     {
+//         products = new List<Product>();
+//         this.customer = customer;
+//     }
 
-    public void AddProduct(Product product)
-    {
-        products.Add(product);
-    }
+//     public void AddProduct(Product product)
+//     {
+//         products.Add(product);
+//     }
 
-    public double GetTotalPrice()
-    {
-        double totalPrice = 0;
-        foreach (Product product in products)
-        {
-            totalPrice += product.GetPrice();
-        }
+//     public double GetTotalPrice()
+//     {
+//         double totalPrice = 0;
+//         foreach (Product product in products)
+//         {
+//             totalPrice += product.GetPrice();
+//         }
 
-        // Add shipping cost based on customer's location
-        if (customer.GetAddress().IsInUSA())
-        {
-            totalPrice += 5;
-        }
-        else
-        {
-            totalPrice += 35;
-        }
+//         // Add shipping cost based on customer's location
+//         if (customer.GetAddress().IsInUSA())
+//         {
+//             totalPrice += 5;
+//         }
+//         else
+//         {
+//             totalPrice += 35;
+//         }
 
-        return totalPrice;
-    }
+//         return totalPrice;
+//     }
 
-    public string GetPackingLabel()
-    {
-        string packingLabel = "";
-        foreach (Product product in products)
-        {
-            packingLabel += "Product Name: " + product.GetName() + ", Product ID: " + product.GetProductId() + "\n";
-        }
-        return packingLabel;
-    }
+//     public string GetPackingLabel()
+//     {
+//         string packingLabel = "";
+//         foreach (Product product in products)
+//         {
+//             packingLabel += "Product Name: " + product.GetName() + ", Product ID: " + product.GetProductId() + "\n";
+//         }
+//         return packingLabel;
+//     }
 
-    public string GetShippingLabel()
-    {
-        return "Customer Name: " + customer.GetName() + "\n" + customer.GetAddress().GetFullAddress();
-    }
-}
+//     public string GetShippingLabel()
+//     {
+//         return "Customer Name: " + customer.GetName() + "\n" + customer.GetAddress().GetFullAddress();
+//     }
+// }
 
-class Product
-{
-    private string name;
-    private string productId;
-    private double price;
-    private int quantity;
+// class Product
+// {
+//     private string name;
+//     private string productId;
+//     private double price;
+//     private int quantity;
 
-    public Product(string name, string productId, double price, int quantity)
-    {
-        this.name = name;
-        this.productId = productId;
-        this.price = price;
-        this.quantity = quantity;
-    }
+//     public Product(string name, string productId, double price, int quantity)
+//     {
+//         this.name = name;
+//         this.productId = productId;
+//         this.price = price;
+//         this.quantity = quantity;
+//     }
 
-    public double GetPrice()
-    {
-        return price * quantity;
-    }
+//     public double GetPrice()
+//     {
+//         return price * quantity;
+//     }
 
-    public string GetName()
-    {
-        return name;
-    }
+//     public string GetName()
+//     {
+//         return name;
+//     }
 
-    public string GetProductId()
-    {
-        return productId;
-    }
-}
+//     public string GetProductId()
+//     {
+//         return productId;
+//     }
+// }
 
-class Customer
-{
-    private string name;
-    private Address address;
+// class Customer
+// {
+//     private string name;
+//     private Address address;
 
-    public Customer(string name, Address address)
-    {
-        this.name = name;
-        this.address = address;
-    }
+//     public Customer(string name, Address address)
+//     {
+//         this.name = name;
+//         this.address = address;
+//     }
 
-    public string GetName()
-    {
-        return name;
-    }
+//     public string GetName()
+//     {
+//         return name;
+//     }
 
-    public Address GetAddress()
-    {
-        return address;
-    }
-}
+//     public Address GetAddress()
+//     {
+//         return address;
+//     }
+// }
 
-class Address
-{
-    private string streetAddress;
-    private string city;
-    private string state;
-    private string country;
+// class Address
+// {
+//     private string streetAddress;
+//     private string city;
+//     private string state;
+//     private string country;
 
-    public Address(string streetAddress, string city, string state, string country)
-    {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.state = state;
-        this.country = country;
-    }
+//     public Address(string streetAddress, string city, string state, string country)
+//     {
+//         this.streetAddress = streetAddress;
+//         this.city = city;
+//         this.state = state;
+//         this.country = country;
+//     }
 
-    public bool IsInUSA()
-    {
-        return country.Equals("USA");
-    }
+//     public bool IsInUSA()
+//     {
+//         return country.Equals("USA");
+//     }
 
-    public string GetFullAddress()
-    {
-        return "Street Address: " + streetAddress + "\nCity: " + city + "\nState/Province: " + state + "\nCountry: " + country;
-    }
-}
+//     public string GetFullAddress()
+//     {
+//         return "Street Address: " + streetAddress + "\nCity: " + city + "\nState/Province: " + state + "\nCountry: " + country;
+//     }
+// }
 
 /*
     This program demonstrates the implementation of the classes for Product, Customer, Address, and Order. It creates two orders with multiple products and displays the packing label, shipping label, and total price for each order.
